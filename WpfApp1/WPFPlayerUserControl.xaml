@@ -1,0 +1,89 @@
+﻿<UserControl x:Class="WpfApp1.WPFPlayerUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp1"
+             mc:Ignorable="d" 
+             d:DesignHeight="110" d:DesignWidth="70"
+             Background="White" MouseDown="UserControl_MouseDown" RenderOptions.ClearTypeHint="Enabled" MouseEnter="UserControl_MouseEnter" MouseLeave="UserControl_MouseLeave">
+
+
+
+
+    <UserControl.Resources>
+
+        <Style TargetType="{x:Type local:WPFPlayerUserControl}">
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"
+                                                To="LightBlue" Duration="0:0:0.3"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"
+                                                To="White" Duration="0:0:0.3"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Style.Triggers>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type local:WPFPlayerUserControl}">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="5">
+                            <ContentPresenter/>
+                            <!--<Border.Effect>
+                                <DropShadowEffect Color="Black" Opacity="0.2" />
+                            </Border.Effect>-->
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            
+
+
+        </Style>
+
+
+
+    </UserControl.Resources>
+
+
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Image Grid.ColumnSpan="1" Grid.RowSpan="1" Grid.Column="0" Grid.Row="0" Stretch="Uniform" HorizontalAlignment="Center" Height="auto" VerticalAlignment="Top" Width="auto" x:Name="imgPlayerImage" Source="/Default_image.png"/>
+
+        <Label Content="Name Surname" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="11" Padding="0" x:Name="lblNameSurname"/>
+        <Label Content="Name" Visibility="Hidden" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="12" Padding="0" x:Name="lblName"/>
+        <Label Content="Surname" Visibility="Hidden" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="12" Padding="0" x:Name="lblSurname"/>
+        <Label Content="Number" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Padding="0" x:Name="lblNumber" />
+        <Label Content="Position" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12" Padding="0" x:Name="lblPosition"/>
+
+
+
+
+
+
+
+
+    </Grid>
+</UserControl>

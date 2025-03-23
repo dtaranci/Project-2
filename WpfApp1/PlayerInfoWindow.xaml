@@ -1,0 +1,68 @@
+﻿<Window x:Class="WpfApp1.PlayerInfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="PlayerInfoWindow" Height="500" Width="400">
+
+
+
+    <Window.Resources>
+        <Storyboard x:Key="myAnimation">
+            <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.3"/>
+        </Storyboard>
+    </Window.Resources>
+    
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource myAnimation}"/>
+        </EventTrigger>
+
+    </Window.Triggers>
+
+
+
+
+
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40px"/>
+            <RowDefinition Height="160px"/>
+            <RowDefinition Height="40px"/>
+            <RowDefinition Height="40px"/>
+            <RowDefinition Height="40px"/>
+            <RowDefinition Height="40px"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100px"/>
+            <ColumnDefinition Width="*" MinWidth="300"/>
+        </Grid.ColumnDefinitions>
+
+        <Image Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Source="/Default_image.png" x:Name="imgPlayerImage"/>
+
+        <Label Content="Player Information" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" x:Name="labeltitle"/>
+
+        <Label Content="Name:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" x:Name="label1"/>
+        <Label Content="Number:" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" x:Name="label2"/>
+        <Label Content="Position:" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" x:Name="label3"/>
+        <Label Content="Captain:" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Right" x:Name="label4"/>
+
+        <Button Content="Close" x:Name="btnClose" Width="60px" Height="40px" Grid.Row="15" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="20px 0" Click="btnClose_Click"/>
+
+
+        <Label Content="Name" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" x:Name="lblName"/>
+        <Label Content="Number" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" x:Name="lblNumber"/>
+        <Label Content="Position" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" x:Name="lblPosition"/>
+        <Label Content="Captain" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" x:Name="lblCaptain"/>
+
+
+
+
+
+    </Grid>
+</Window>

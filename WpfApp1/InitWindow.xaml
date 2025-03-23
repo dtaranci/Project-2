@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfApp1.InitWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:prop="clr-namespace:ClassLibrary1.Resources;assembly=ClassLibrary1"
+        mc:Ignorable="d"
+        Title="Initial Settings" Height="400" Width="200" KeyDown="Window_KeyDown">
+    <Grid>
+        <RadioButton Content="{x:Static prop:Resource.male}" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" GroupName="gender" x:Name="rbMale"/>
+        <RadioButton Content="{x:Static prop:Resource.female}" HorizontalAlignment="Right" Margin="0,33,0,0" VerticalAlignment="Top" GroupName="gender" x:Name="rbFemale"/>
+        <RadioButton Content="{x:Static prop:Resource.api}" HorizontalAlignment="Left" Margin="18,237,0,0" VerticalAlignment="Top" GroupName="source" x:Name="rbAPI"/>
+        <RadioButton Content="{x:Static prop:Resource.file}" HorizontalAlignment="Right" Margin="0,237,10,0" VerticalAlignment="Top" GroupName="source" x:Name="rbFile"/>
+        <ComboBox HorizontalAlignment="Center" Margin="0,124,0,0" VerticalAlignment="Top" Width="120" x:Name="cbLanguage">
+            <ComboBoxItem Content="Croatian"/>
+            <ComboBoxItem Content="English"/>
+        </ComboBox>
+        <Button Content="{x:Static prop:Resource.cancel}" HorizontalAlignment="Left" Margin="10,278,0,0" VerticalAlignment="Top" Width="69" x:Name="btnCancel" Click="btnCancel_Click" IsTabStop="False"/>
+        <Button Content="{x:Static prop:Resource.save}" HorizontalAlignment="Right" Margin="0,278,10,0" VerticalAlignment="Top" Width="69" x:Name="btnSave" Click="btnSave_Click" IsTabStop="False"/>
+        <ComboBox HorizontalAlignment="Center" Margin="0,194,0,0" VerticalAlignment="Top" Width="120" x:Name="cbWindowSize">
+            <ComboBoxItem Content="1280x1000"/>
+            <ComboBoxItem Content="1600x1000"/>
+            <ComboBoxItem Content="1920x1080"/>
+            <ComboBoxItem Content="{x:Static prop:Resource.fullscreen}"/>
+        </ComboBox>
+        <Label Content="{x:Static prop:Resource.language}" HorizontalAlignment="Center" Margin="0,93,0,0" VerticalAlignment="Top"/>
+        <Label Content="{x:Static prop:Resource.display}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,167,0,0"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,93 @@
+﻿<Window x:Class="WpfApp1.InfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:prop="clr-namespace:ClassLibrary1.Resources;assembly=ClassLibrary1"
+        mc:Ignorable="d"
+        Title="InfoWindow" Height="680" Width="400">
+
+
+
+
+    <Window.Resources>
+        <Storyboard x:Key="myAnimation3">
+            <ColorAnimation Storyboard.TargetProperty="Background.Color" From="LightBlue" To="White" Duration="0:0:0.5"/>
+            <DoubleAnimation Storyboard.TargetProperty="FontSize" From="18" To="12"/>
+        </Storyboard>
+    </Window.Resources>
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource myAnimation3}"/>
+        </EventTrigger>
+
+    </Window.Triggers>
+
+
+
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40px"/>
+            <RowDefinition Height="40px"/>
+            <RowDefinition Height="40px"/>
+            <RowDefinition Height="40px"/>
+            <RowDefinition Height="40px"/>
+            <RowDefinition Height="40px"/>
+            <RowDefinition Height="40px"/>
+            <RowDefinition Height="40px"/>
+            <RowDefinition Height="40px"/>
+            <RowDefinition Height="40px"/>
+            <RowDefinition Height="40px"/>
+            <RowDefinition Height="40px"/>
+            <RowDefinition Height="40px"/>
+            <RowDefinition Height="40px"/>
+            <RowDefinition Height="40px"/>
+            <RowDefinition Height="40px"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100px"/>
+            <ColumnDefinition Width="*" MinWidth="300"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Team Name" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" x:Name="lblTeamName"/>
+
+        <Label Content="{x:Static prop:Resource.ID}" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right"/>
+        <Label Content="{x:Static prop:Resource.country}" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right"/>
+        <Label Content="{x:Static prop:Resource.altname}" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right"/>
+        <Label Content="{x:Static prop:Resource.fifacode}" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right"/>
+        <Label Content="{x:Static prop:Resource.groupid}" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Right"/>
+        <Label Content="{x:Static prop:Resource.groupletter}" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Right"/>
+        <Label Content="{x:Static prop:Resource.wins}" Grid.Row="7" Grid.Column="0" HorizontalAlignment="Right"/>
+        <Label Content="{x:Static prop:Resource.draws}" Grid.Row="8" Grid.Column="0" HorizontalAlignment="Right"/>
+        <Label Content="{x:Static prop:Resource.losses}" Grid.Row="9" Grid.Column="0" HorizontalAlignment="Right"/>
+        <Label Content="{x:Static prop:Resource.gamesplayed}" Grid.Row="10" Grid.Column="0" HorizontalAlignment="Right"/>
+        <Label Content="{x:Static prop:Resource.points}" Grid.Row="11" Grid.Column="0" HorizontalAlignment="Right"/>
+        <Label Content="{x:Static prop:Resource.goalsfor}" Grid.Row="12" Grid.Column="0" HorizontalAlignment="Right"/>
+        <Label Content="{x:Static prop:Resource.goalsagainst}" Grid.Row="13" Grid.Column="0" HorizontalAlignment="Right"/>
+        <Label Content="{x:Static prop:Resource.goalsdifferential}" Grid.Row="14" Grid.Column="0" HorizontalAlignment="Right"/>
+        <Button Content="{x:Static prop:Resource.close}" x:Name="btnClose" Width="60px" Height="40px" Grid.Row="15" Grid.Column="1" HorizontalAlignment="Right" Margin="20px 0" Click="btnClose_Click"/>
+
+
+        <Label Content="ID" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" x:Name="lblID"/>
+        <Label Content="Country" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" x:Name="lblCountry"/>
+        <Label Content="Alt_name" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" x:Name="lblAltName"/>
+        <Label Content="Fifa_code" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" x:Name="lblFifaCode"/>
+        <Label Content="Group__ID" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" x:Name="lblGroupID"/>
+        <Label Content="Group__letter" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Center" x:Name="lblGroupLetter"/>
+        <Label Content="Wins" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Center" x:Name="lblWins"/>
+        <Label Content="Draws" Grid.Row="8" Grid.Column="1" HorizontalAlignment="Center" x:Name="lblDraws"/>
+        <Label Content="Losses" Grid.Row="9" Grid.Column="1" HorizontalAlignment="Center" x:Name="lblLosses"/>
+        <Label Content="Games__played" Grid.Row="10" Grid.Column="1" HorizontalAlignment="Center" x:Name="lblGamesPlayed"/>
+        <Label Content="Points" Grid.Row="11" Grid.Column="1" HorizontalAlignment="Center" x:Name="lblPoints"/>
+        <Label Content="Goals__for" Grid.Row="12" Grid.Column="1" HorizontalAlignment="Center" x:Name="lblGoalsFor"/>
+        <Label Content="Goals__against" Grid.Row="13" Grid.Column="1" HorizontalAlignment="Center" x:Name="lblGoalsAgainst"/>
+        <Label Content="Goals__differential" Grid.Row="14" Grid.Column="1" HorizontalAlignment="Center" x:Name="lblGoalsDifferential"/>
+
+
+
+    </Grid>
+</Window>

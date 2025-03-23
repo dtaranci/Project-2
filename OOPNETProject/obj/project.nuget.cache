@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "cCG5NvHtUauYTywaTbzYcTUhM6AVEa+DCxNnkaWUslMNG9+uoWCEH2PM9V2C7VjneteqmBiinGojMtLvfNOdsw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Derin\\Downloads\\DerinTaranci_OOPNET_Project_v1.04_untested\\OOPNETProject\\OOPNETProject.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Derin\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

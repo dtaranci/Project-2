@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "wukbAHsW3SCIAL3s8IFTD1J9V3G6sBps9cbvksnbZYjFBUcilENtqhyWaLA6gAQnaFlB/mjwFs68CQABdOIghQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Derin\\Downloads\\DerinTaranci_OOPNET_Project_v1.04_untested\\WpfApp1\\WpfApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Derin\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
